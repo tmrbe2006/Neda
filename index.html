@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        try {
+          var originalFetch = window.fetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return originalFetch;
+            },
+            set: function(val) {
+              originalFetch = val;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          console.warn("Failed to define custom fetch getter/setter:", e);
+        }
+      })();
+    </script>
+    <title>نداء - نظام إدارة طلبات المساعدة والطوارئ</title>
+    <meta name="description" content="نظام ذكي ولحظي لإدارة نداءات المساعدة وحالات الطوارئ في مراكز التأهيل (أدوار، أجنحة، غرف، وأسرة) مع دعم تعدد اللغات والتقارير الذكية بالذكاء الاصطناعي." />
+    <meta property="og:title" content="نداء - نظام إدارة طلبات المساعدة والطوارئ" />
+    <meta property="og:description" content="نظام ذكي ولحظي لإدارة نداءات المساعدة وحالات الطوارئ في مراكز التأهيل (أدوار، أجنحة، غرف، وأسرة) مع دعم تعدد اللغات والتقارير الذكية بالذكاء الاصطناعي." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="نداء - Nidaa" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="amber-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="slate-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <!-- Rounded Squircle Base -->
+  <rect x="24" y="24" width="464" height="464" rx="100" fill="url(#slate-grad)" />
+  
+  <!-- Outer pulse ring -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="url(#amber-grad)" stroke-width="12" stroke-dasharray="16 12" opacity="0.4" />
+  <circle cx="256" cy="256" r="140" fill="none" stroke="url(#amber-grad)" stroke-width="8" opacity="0.6" />
+  
+  <!-- Central Signal Bell Beacon -->
+  <path d="M256 120c-55 0-100 45-100 100v90h200v-90c0-55-45-100-100-100zm-120 190h240v24H136v-24zm120 48c18 0 32-14 32-32H224c0 18 14 32 32 32z" fill="url(#amber-grad)" />
+  <circle cx="256" cy="256" r="40" fill="#f8fafc" opacity="0.1" />
+</svg>
